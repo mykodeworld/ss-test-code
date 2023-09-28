@@ -8,6 +8,13 @@ on:
     # Workflow is not triggered if the following files are only changed in the PR
     paths-ignore: [ 'README.md', '.gitignore' ]
 
+permissions:
+  contents: 'write'
+  id-token: 'write'
+  issues: 'write'
+  checks: 'write'
+  pull-requests: 'write'
+  
 jobs:
   lint:
     runs-on: ubuntu-latest
