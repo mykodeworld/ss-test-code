@@ -1,6 +1,12 @@
 name: Node CI environment
 
-on: [pull_request]
+on:
+  # Workflow is triggered when a PR targeting main branch is opened, reopened, or synchronized
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: 'main'
+    # Workflow is not triggered if the following files are only changed in the PR
+    paths-ignore: [ 'README.md', '.gitignore' ]
 
 jobs:
   lint:
