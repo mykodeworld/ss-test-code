@@ -33,12 +33,12 @@ jobs:
           NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
 
       - name: npm install
-        working-directory: ./application
+        working-directory: ./js_files
         run: npm i --ignore-scripts
 
       - name: Run ESLint
         uses: ninosaurus/eslint-check@v5
         with:
-          eslint-config-path: "./application/assets/js/.eslintrc.json"
+          eslint-config-path: "./.eslintrc.js"
           custom-directory: "./application"
           repo-token: ${{secrets.GITHUB_TOKEN}}
