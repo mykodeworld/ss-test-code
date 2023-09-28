@@ -42,10 +42,19 @@ jobs:
       - name: npm install
         working-directory: ./js_files
         run: npm i --ignore-scripts
+        
+      - name: eslint install
+        working-directory: ./js_files
+        run: npm install --save-dev eslint
+      
+      - name: Analysing the code with Eslint
+        working-directory: ./js_files
+        run: npx eslint $(git ls-files '*.js')
+        
+      # - name: Run ESLint
+      #   uses: ninosaurus/eslint-check@v5
+      #   with:
+      #     eslint-config-path: "./.eslintrc.js"
+      #     custom-directory: "./js_files"
+      #     repo-token: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Run ESLint
-        uses: ninosaurus/eslint-check@v5
-        with:
-          eslint-config-path: "./.eslintrc.js"
-          custom-directory: "./js_files"
-          repo-token: ${{secrets.GITHUB_TOKEN}}
