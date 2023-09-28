@@ -45,7 +45,7 @@ jobs:
         
       - name: eslint install
         working-directory: ./js_files
-        run: npm install --save-dev eslint
+        run: npm install eslint-plugin-react@latest --save-dev
       
       - name: Analysing the code with Eslint
         working-directory: ./js_files
