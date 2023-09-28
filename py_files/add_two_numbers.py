@@ -2,11 +2,11 @@
 This program adds two numbers
 """
 
-floatNum1 = 5.5
-floatNum2 = 1.15
+FLOAT_NUM1 = 5.5
+FLOAT_NUM2 = 1.15
 
 # Add two numbers
-floatSum = float(floatNum1) + float(floatNum2)
+floatSum = float(FLOAT_NUM1) + float(FLOAT_NUM2)
 
 # Display the sum
-print(f"The sum of {floatNum1} and {floatNum2} is {floatSum}")
+print(f"The sum of {FLOAT_NUM1} and {FLOAT_NUM2} is {floatSum}")
