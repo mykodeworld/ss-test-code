@@ -48,7 +48,7 @@ jobs:
         run: npm install eslint-plugin-react@latest --save-dev
       
       - name: Analysing the code with Eslint
-        working-directory: ./js_files
+        working-directory: ./
         run: npx eslint $(git ls-files '*.js')
         
       # - name: Run ESLint
