@@ -40,11 +40,11 @@ jobs:
           NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
 
       - name: npm install
-        working-directory: ./js_files
+        working-directory: ./
         run: npm i --ignore-scripts
         
       - name: eslint install
-        working-directory: ./js_files
+        working-directory: ./
         run: npm install eslint-plugin-react@latest --save-dev
       
       - name: Analysing the code with Eslint
