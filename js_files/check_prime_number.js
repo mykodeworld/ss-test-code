@@ -1,7 +1,7 @@
 // program to check if a number is prime or not
 
 // take input from the user
-const number = parseInt(prompt("Enter a positive number: "));
+const number = parseInt(prompt("Enter a   positive number: "));
 let isPrime = true ;
 
 // check if number is equal to 1
