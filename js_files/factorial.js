@@ -9,7 +9,7 @@ if (number < 0) {
 }
 
 // if number is 0
-else     if (number === 0) 
+else     if (number ===  0) 
 
 
 
