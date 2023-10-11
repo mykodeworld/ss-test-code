@@ -14,6 +14,7 @@ on:
     # Remove the line above to run when pushing to master or main
   pull_request:
     branches: [master, main]
+    types: [opened, reopened, synchronize]
 
 ###############
 # Set the Job #
@@ -41,7 +42,7 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v1
         with:
           # Full git history is needed to get a proper
           # list of changed files within `super-linter`
