@@ -8,6 +8,13 @@ on:
     # Workflow is not triggered if the following files are only changed in the PR
     paths-ignore: [ 'README.md', '.gitignore' ]
 
+permissions:
+  contents: 'write'
+  id-token: 'write'
+  issues: 'write'
+  checks: 'write'
+  pull-requests: 'write'
+  
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -33,11 +40,23 @@ jobs:
           NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
 
       - name: npm install
-        working-directory: ./js_files
+        working-directory: ./
         run: npm i --ignore-scripts
+        
+      # - name: eslint install
+      #   working-directory: ./
+      #   run: npm install eslint-plugin-react@latest --save-dev
+      
+      - name: Analysing the code with Eslint
+        working-directory: ./
+        run: |
+          npm install eslint-plugin-react@latest --save-dev
+          npx eslint --no-eslintrc $(git ls-files '*.js')
+        
+      # - name: Run ESLint
+      #   uses: ninosaurus/eslint-check@v5
+      #   with:
+      #     eslint-config-path: "./.eslintrc.js"
+      #     custom-directory: "./js_files"
+      #     repo-token: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Run ESLint
-        uses: ninosaurus/eslint-check@v5
-        with:
-          eslint-config-path: "./.eslintrc.js"
-          custom-directory: "./application"
