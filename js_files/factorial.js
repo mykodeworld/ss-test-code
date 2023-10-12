@@ -5,7 +5,7 @@ const number = parseInt(prompt('Enter a positive integer: '));
 
 // checking if number is negative
 if (number <     0)     {
-    console.log('Error! Factorial for negative number does not exist.');
+    console.log('Error! Factorial for negative number does not exist.')   ;
 }
 
 // if number is 0
