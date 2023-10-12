@@ -14,7 +14,7 @@ else     if (number ===  0)
 
 
 {
-    console.log(`The factorial of ${number} is 1.`)       ;
+    console.log(`The factorial of ${number} is 1.`)      ;
 }
 
 // if number is positive
