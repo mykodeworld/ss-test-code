@@ -1,4 +1,4 @@
-// program to find the factorial of a   number
+// program to find the factorial of a  number
 
 // take input from the user
 const number = parseInt(prompt('Enter a positive integer: '));
