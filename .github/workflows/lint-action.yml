@@ -30,6 +30,6 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          eslint_args: /js_files/**/.js
+          eslint_args: sub_dir1/**/.js
           # prettier: true
           auto_fix: true
