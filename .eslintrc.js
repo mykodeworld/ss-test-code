@@ -28,5 +28,6 @@ module.exports = {
     },
     "plugins": [
         "react"
-    ]
+    ],
+    "files": "sub_dir1/**/*.js",
 };
