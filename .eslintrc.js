@@ -33,7 +33,7 @@ module.exports = {
     "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
-     "ecmaVersion": 2017,
+     "ecmaVersion": "latest",
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
