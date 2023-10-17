@@ -21,7 +21,7 @@ module.exports = {
       "es6": true,
       "browser": true
    },
-   "extends": "eslint:recommended",
+   "extends": ["eslint:recommended", "plugin:react/recommended"],
    "plugins": [
       "react"
    ],
@@ -30,7 +30,7 @@ module.exports = {
        "files": "sub_dir1/**/*.js",
     }
    ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
      "ecmaVersion": "latest",
