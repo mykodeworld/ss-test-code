@@ -29,5 +29,9 @@ module.exports = {
    "plugins": [
       "react"
    ],
-   "files": "sub_dir1/**/*.js",
+   "overrides": [
+    {
+       "files": "sub_dir1/**/*.js",
+    }
+   ]
 };
