@@ -29,5 +29,15 @@ module.exports = {
     {
        "files": "sub_dir1/**/*.js",
     }
-   ]
+   ],
+    "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"],
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
 };
