@@ -22,10 +22,6 @@ module.exports = {
       "browser": true
    },
    "extends": "eslint:recommended",
-   "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
-   },
    "plugins": [
       "react"
    ],
