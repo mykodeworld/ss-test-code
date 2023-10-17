@@ -8,7 +8,7 @@
 	"main": "./dist/index.js",
 	"scripts": {
 		"test": "jest",
-		"lint": "eslint --max-warnings 0 \"sub_dir1/**/*.js\"",
+		"lint": "eslint --max-warnings 0 \"**/*.js\"",
 		"lint:fix": "yarn lint --fix",
 		"format": "prettier --list-different \"**/*.{js}\"",
 		"format:fix": "yarn format --write",
