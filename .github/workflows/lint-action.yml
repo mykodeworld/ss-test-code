@@ -31,5 +31,6 @@ jobs:
         with:
           eslint: true
           # eslint_args: sub_dir1/**/.js
+          eslint_args: --no-eslintrc
           # prettier: true
           auto_fix: true
